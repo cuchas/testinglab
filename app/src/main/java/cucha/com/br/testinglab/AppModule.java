@@ -2,6 +2,8 @@ package cucha.com.br.testinglab;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.Locale;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -63,5 +65,9 @@ public class AppModule {
 
     public static Gson getGson() {
         return new GsonBuilder().create();
+    }
+
+    public static Locale getLocale() {
+        return Locale.getDefault();
     }
 }

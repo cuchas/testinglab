@@ -1,11 +1,24 @@
 package cucha.com.br.testinglab;
 
 import java.io.Serializable;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class Filme implements Serializable {
+    private Locale locale;
     private String url;
     private String titulo;
     private float preco;
+
+    public Filme() {}
+
+    public Filme(Locale locale) {
+        this.locale = locale;
+    }
+
+    public void setLocale(Locale locale) {
+        this.locale = locale;
+    }
 
     public void setPreco(float preco) {
         this.preco = preco;
@@ -29,5 +42,9 @@ public class Filme implements Serializable {
 
     public float getPreco() {
         return preco;
+    }
+
+    public String getPrecoFormatado() {
+        return NumberFormat.getInstance(locale).format(preco);
     }
 }
