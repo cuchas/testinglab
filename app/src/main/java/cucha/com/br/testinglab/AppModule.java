@@ -1,12 +1,14 @@
 package cucha.com.br.testinglab;
-import io.reactivex.Scheduler;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.internal.schedulers.RxThreadFactory;
-import io.reactivex.schedulers.Schedulers;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class AppModule {
 
@@ -47,15 +49,19 @@ public class AppModule {
         return okHttpClient;
     }
 
-    public Scheduler getUIScheduler() {
+    public static Scheduler getUIScheduler() {
         return AndroidSchedulers.mainThread();
     }
 
-    public Scheduler getIOScheduler() {
+    public static Scheduler getIOScheduler() {
         return Schedulers.io();
     }
 
-    public Scheduler getFakeIOScheduler() {
+    public static Scheduler getFakeIOScheduler() {
         return Schedulers.computation();
+    }
+
+    public static Gson getGson() {
+        return new GsonBuilder().create();
     }
 }

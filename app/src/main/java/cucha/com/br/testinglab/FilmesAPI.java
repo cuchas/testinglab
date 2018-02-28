@@ -1,8 +1,10 @@
 package cucha.com.br.testinglab;
 
 
-import io.reactivex.Observable;
+import java.util.List;
+
+import rx.Observable;
 
 public interface FilmesAPI {
-    Observable<Filme> getFilmes();
+    Observable<List<Filme>> getFilmes();
 }

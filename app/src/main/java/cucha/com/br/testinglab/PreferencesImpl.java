@@ -1,12 +1,15 @@
 package cucha.com.br.testinglab;
 
-
 import java.util.List;
 
 public class PreferencesImpl implements Preferences {
+    @Override
+    public String getFilmes() {
+        return null;
+    }
 
     @Override
-    public List<Filme> getFilmes() {
-        return null;
+    public void saveFilmes(List<Filme> filmeList) {
+
     }
 }
