@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestingLab</string>
+    <string name="comprar">comprar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_timeout">TimeoutActivity</string>
+    <string name="timeout">Timeout</string>
+    <string name="servidor_fora">Servidor Fora</string>
+    <string name="nenhum_item_disponivel">Nenhum item disponivel</string>
+</resources>
