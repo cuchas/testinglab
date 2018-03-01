@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://i.ytimg.com/vi/JGRwxN78CRM/hqdefault.jpg",
+    "titulo": "Mulher Maravilha",
+    "preco": 9.90
+  },
+  {
+    "url": "https://i.pinimg.com/736x/e8/7a/80/e87a809fc3b890684912d22f772ddce1--avengers-cast-dc-comic.jpg",
+    "titulo": "Avengers",
+    "preco": 5.50
+  },
+  {
+    "url": "https://c2.staticflickr.com/4/3494/3240398035_07e0ddb8a4.jpg",
+    "titulo": "Pantera Negra",
+    "preco": 300.00
+  },
+  {
+    "url": "http://2.bp.blogspot.com/--ldz4rBrXUY/T_IXwYePlgI/AAAAAAAAALY/8tEpa12kqvE/s1600/iron-man.png",
+    "titulo": "Iron Man",
+    "preco": 9.90
+  },
+  {
+    "url": "http://3.bp.blogspot.com/-Q1_CpUzH6Y4/US1XQYNphmI/AAAAAAAADOk/IKfSqJTov2M/w1200-h630-p-nu/Relembrando-Doug-Funnie-e-as-aventuras-do-Homem-Codorna2.jpg",
+    "titulo": "Homem Cueca - Doug",
+    "preco": 9.90
+  }
+]
