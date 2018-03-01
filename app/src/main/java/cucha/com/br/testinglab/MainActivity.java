@@ -9,6 +9,8 @@ import android.widget.ViewFlipper;
 import java.util.List;
 import java.util.Locale;
 
+import rx.functions.Action1;
+
 public class MainActivity extends AppCompatActivity implements FilmesAdapter.Listener {
 
     private static final int FILMES = 0;
@@ -31,12 +33,25 @@ public class MainActivity extends AppCompatActivity implements FilmesAdapter.Lis
         recycler = findViewById(R.id.recyclerView);
         recycler.setAdapter(adapter);
         recycler.setLayoutManager(new LinearLayoutManager(this));
+
+        mostraFilmes();
     }
 
-    public void mostraFilmes(List<Filme> filmeList) {
-        adapter.appendFilmes(filmeList);
+    public void mostraFilmes() {
+//        List<Filme> filmeList
 
-        flipper.setDisplayedChild(FILMES);
+        api.getFilmes()
+                .subscribeOn(AppModule.getIOScheduler())
+                .observeOn(AppModule.getUIScheduler())
+                .subscribe(filmeList1 -> {
+                    adapter.appendFilmes(filmeList1);
+
+                    flipper.setDisplayedChild(FILMES);
+                });
+
+//        adapter.appendFilmes(filmeList);
+//
+//        flipper.setDisplayedChild(FILMES);
     }
 
     public void mostraVazio() {

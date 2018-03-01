@@ -45,6 +45,7 @@ public class Filme implements Serializable {
     }
 
     public String getPrecoFormatado() {
-        return NumberFormat.getInstance(locale).format(preco);
+        NumberFormat format = NumberFormat.getCurrencyInstance(locale);
+        return format.format(preco);
     }
 }
