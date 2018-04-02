@@ -7,9 +7,6 @@
 - Caso ele toque em um dos itens ele deve ir a tela de detalhes do item.
 - A lista de filmes deve ser guardada e utilizada enquanto é atualizada
 
-## Observações:
-A API não existe ainda, devemos definir o payload nós mesmos.
-
 ## Os Testes devem validar:
 - Que o preço está formatado na moeda correta (real)
 - Que a chamada para o servidor é realizada na api correta
@@ -19,3 +16,7 @@ A API não existe ainda, devemos definir o payload nós mesmos.
 - Que a view "servidor fora" é apresentada
 - Que a view "nenhum item disponível" é apresentada
 - Que caso um item seja selecionado o usuário é levado para a "view de detalhes"
+
+## Observações:
+A API não existe ainda, devemos definir o payload nós mesmos.
+
